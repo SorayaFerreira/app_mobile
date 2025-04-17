@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bird_detail_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".BirdDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Bird Image -->
+        <ImageView
+            android:id="@+id/image_bird"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/arara_vermelha" />
+
+        <!-- Content Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Bird Name -->
+            <TextView
+                android:id="@+id/bird_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scarlet Macaw"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Scientific Name -->
+            <TextView
+                android:id="@+id/scientific_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:text="Ara macao"
+                android:textColor="#888888"
+                android:textSize="16sp" />
+
+            <!-- Play Sound Button -->
+            <Button
+                android:id="@+id/btn_play_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/light_blue_900"
+                android:drawableLeft="@android:drawable/ic_lock_silent_mode_off"
+                android:padding="12dp"
+                android:text="Play Sound"
+                android:textColor="@color/white"
+                app:cornerRadius="16dp" />
+
+            <!-- Description Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="DESCRIPTION"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Bird Description -->
+            <TextView
+                android:id="@+id/bird_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="128dp"
+                android:text="A large, striking red, yellow, and blue parrot native to humid forests of Central and South America. Easily recognizable by its colorful feathers and long tail.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa loolgoa ljasdflkjsaefA large, striking red, yellow, and blue parrot native to humid forests of Central and South America. Easily recognizable by its colorful feathers and long tail.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa loolgoa ljasdflkjsaef A large, striking red, yellow, and blue parrot native to humid forests of Central and South America. Easily recognizable by its colorful feathers and long tail.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa loolgoa ljasdflkjsaefA large, striking red, yellow, and blue parrot native to humid forests of Central and South America. Easily recognizable by its colorful feathers and long tail.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa loolgoa ljasdflkjsaef A large, striking red, yellow, and blue parrot native to humid forests of Central and South America. Easily recognizable by its"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -21,10 +21,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/arara"
+        android:id="@+id/aves"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="arara vermelha"
+        android:text="aves"
         app:layout_constraintBottom_toTopOf="@+id/text_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
