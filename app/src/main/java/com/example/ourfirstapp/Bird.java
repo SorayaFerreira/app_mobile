@@ -27,7 +27,7 @@ public class Bird implements Parcelable {
         description = in.readString();
     }
 
-    public static final Creator<Bird> CREATOR = new Creator<Bird>() {
+    public static final Creator<Bird> CREATOR = new Creator<>() {
         @Override
         public Bird createFromParcel(Parcel in) {
             return new Bird(in);
