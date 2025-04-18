@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //navegar para a pagina de aves atraves de um botao de teste
-        Button button = view.findViewById(R.id.aves);
+        Button button = view.findViewById(R.id.birds);
         button.setOnClickListener(v -> {
             Navigation.findNavController(v).navigate(R.id.action_navigation_home_to_birdsFragment);
         });

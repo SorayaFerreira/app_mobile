@@ -16,11 +16,10 @@
 
         <!-- Bird Image -->
         <ImageView
-            android:id="@+id/image_bird"
+            android:id="@+id/bird_image"
             android:layout_width="match_parent"
             android:layout_height="450dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/arara_vermelha" />
+            android:scaleType="centerCrop" />
 
         <!-- Content Container -->
         <LinearLayout
@@ -57,18 +56,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="@color/light_blue_900"
-                android:drawableLeft="@android:drawable/ic_lock_silent_mode_off"
                 android:padding="12dp"
-                android:text="Play Sound"
+                android:text="Emitir Gorjeio"
                 android:textColor="@color/white"
-                app:cornerRadius="16dp" />
+                app:cornerRadius="16dp"
+                app:icon="@drawable/bird_icon"
+                app:iconSize="48dp" />
 
             <!-- Description Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="DESCRIPTION"
+                android:text="DESCRIÇÃO"
                 android:textColor="#444444"
                 android:textSize="14sp"
                 android:textStyle="bold" />
