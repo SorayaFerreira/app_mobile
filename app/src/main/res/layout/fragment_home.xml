@@ -1,60 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/birds"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="134dp"
-        android:text="Ver Pássaros"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDescricao" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <Spinner
-        android:id="@+id/spinnerBiomas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageBioma"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!-- Spinner de Biomas -->
+        <Spinner
+            android:id="@+id/spinnerBiomas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <ImageView
-        android:id="@+id/imageBioma"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/amazonia"
-        app:layout_constraintBottom_toTopOf="@+id/textDescricao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerBiomas" />
+        <!-- Imagem do Bioma -->
+        <ImageView
+            android:id="@+id/imageBioma"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground" />
 
-    <TextView
-        android:id="@+id/textDescricao"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:autoText="true"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/birds"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageBioma" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Descrição do Bioma -->
+        <TextView
+            android:id="@+id/textDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp"
+            android:autoText="true"
+            android:text="Selecione um bioma"
+            android:textSize="16sp"
+            app:autoSizeMaxTextSize="32sp"
+            app:autoSizeStepGranularity="2sp" />
+
+        <!-- Botão para navegar a tela de aves -->
+        <Button
+            android:id="@+id/btnBirds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ir para Aves"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+</ScrollView>
