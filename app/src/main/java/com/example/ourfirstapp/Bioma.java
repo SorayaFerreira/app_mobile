@@ -60,7 +60,6 @@ public class Bioma extends Fragment {
                 imageBioma.setImageResource(R.drawable.amazonia);
                 textDescricao.setText("A Amazônia é o maior bioma do Brasil [...]");
                 break;
-            // ... os outros biomas ...
         }
     }
 }

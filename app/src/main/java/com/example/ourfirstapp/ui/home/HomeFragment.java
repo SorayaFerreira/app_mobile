@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,12 +19,16 @@ import androidx.navigation.Navigation;
 
 import com.example.ourfirstapp.R;
 
+import java.util.Objects;
+
 public class HomeFragment extends Fragment {
 
     private Spinner spinnerBiomas;
     private ImageView imageBioma;
     private TextView textDescricao;
     private Button btnBirds;
+    private String selectedBiome = "";
+
 
     private final String[] biomas = {
             "Amazônia", "Caatinga", "Cerrado",
@@ -52,6 +57,7 @@ public class HomeFragment extends Fragment {
                 android.R.layout.simple_spinner_item,
                 biomas
         );
+
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerBiomas.setAdapter(adapter);
 
@@ -59,16 +65,26 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
                 atualizarConteudo(biomas[position]);
+                selectedBiome = parent.getItemAtPosition(position).toString();
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) { }
         });
 
         // Navega para o Fragment de aves
-        btnBirds.setOnClickListener(v ->
+        btnBirds.setOnClickListener(v -> {
+            if (!Objects.equals(selectedBiome, "")) {
+                Bundle bundle = new Bundle();
+                bundle.putString("selected_biome", selectedBiome);
+
                 Navigation.findNavController(v)
-                        .navigate(R.id.action_navigation_home_to_birdsFragment)
-        );
+                        .navigate(R.id.action_navigation_home_to_birdsFragment, bundle);
+            } else {
+                Toast.makeText(getContext(), "Essa opção ainda não está disponível.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     private void atualizarConteudo(String bioma) {
@@ -97,7 +113,7 @@ public class HomeFragment extends Fragment {
             case "Mata Atlântica":
                 imageBioma.setImageResource(R.drawable.mata_atlantica);
                 textDescricao.setText(
-                        "a Mata Atlântica ocorre ao longo do litoral brasileiro, com clima variado e vegetação densa e úmida. Apesar de muito devastada, ainda abriga espécies ameaçadas como o mico-leão-dourado e a onça-parda."
+                        "A Mata Atlântica ocorre ao longo do litoral brasileiro, com clima variado e vegetação densa e úmida. Apesar de muito devastada, ainda abriga espécies ameaçadas como o mico-leão-dourado e a onça-parda."
                 );
                 break;
 

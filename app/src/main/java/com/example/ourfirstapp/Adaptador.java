@@ -6,13 +6,14 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.content.Context;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
 public class Adaptador extends BaseAdapter {
 
-    private Context context;
-    private List<Bird> birdList;
+    private final Context context;
+    private final List<Bird> birdList;
 
     public Adaptador(Context context, List<Bird> birdList) {
         this.context = context;
@@ -34,23 +35,25 @@ public class Adaptador extends BaseAdapter {
         return position;
     }
 
-    // This is where the binding happens
+    // Aqui é onde ocorre o binding
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView iv;
+        View iv;
 
         if (convertView == null) {
-            iv = new ImageView(context);
-            iv.setLayoutParams(new ViewGroup.LayoutParams(250, 250));
-            iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            iv.setPadding(5, 5, 5, 5);
+            LayoutInflater inflater = LayoutInflater.from(context);
+            iv = inflater.inflate(R.layout.i_bird, parent, false);
         } else {
-            iv = (ImageView) convertView;
+            iv = convertView;
         }
 
-        // Get the Bird object and set its image
+        // Pega o objeto Bird e mostra sua foto
+
+        ImageView imageView = iv.findViewById(R.id.bird_image);
+        TextView textView = iv.findViewById(R.id.bird_name);
         Bird currentBird = birdList.get(position);
-        iv.setImageResource(currentBird.getImageResId());
+        imageView.setImageResource(currentBird.getImageResId());
+        textView.setText(currentBird.getName());
 
         return iv;
     }

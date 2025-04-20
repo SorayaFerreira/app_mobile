@@ -42,9 +42,9 @@
             android:id="@+id/btnBirds"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ir para Aves"
+            android:layout_marginTop="24dp"
             android:gravity="center_horizontal"
-            android:layout_marginTop="24dp" />
+            android:text="Ir para Aves" />
 
     </LinearLayout>
 </ScrollView>
