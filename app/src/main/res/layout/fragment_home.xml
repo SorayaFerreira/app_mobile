@@ -8,43 +8,53 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:overScrollMode="ifContentScrolls"
+        android:padding="30dp"
+        android:textAlignment="center"
+        android:visibility="visible">
 
         <!-- Spinner de Biomas -->
         <Spinner
             android:id="@+id/spinnerBiomas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="8dp"
+            android:textSize="40dp"/>
 
         <!-- Imagem do Bioma -->
+
+        <!-- Descrição do Bioma -->
+
+        <!-- Botão para navegar a tela de aves -->
+
         <ImageView
             android:id="@+id/imageBioma"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="325dp"
+            android:layout_height="182dp"
             android:layout_marginTop="16dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_foreground" />
 
-        <!-- Descrição do Bioma -->
         <TextView
             android:id="@+id/textDescricao"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_width="329dp"
+            android:layout_height="273dp"
             android:layout_marginTop="16dp"
             android:autoText="true"
             android:text="Selecione um bioma"
+            android:textAlignment="inherit"
             android:textSize="16sp"
             app:autoSizeMaxTextSize="32sp"
             app:autoSizeStepGranularity="2sp" />
 
-        <!-- Botão para navegar a tela de aves -->
         <Button
             android:id="@+id/btnBirds"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:backgroundTint="@color/teal_700"
             android:gravity="center_horizontal"
-            android:text="Ir para Aves" />
+            android:text="Ver aves disponíveis para este bioma" />
 
     </LinearLayout>
 </ScrollView>
