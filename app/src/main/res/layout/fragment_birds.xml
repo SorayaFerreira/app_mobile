@@ -17,25 +17,27 @@
             android:id="@+id/textview_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="68dp"
-            android:text="Espécies:"
-            android:textSize="24sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:text="Espécies para o bioma selecionado:"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <GridView
             android:id="@+id/grid1"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="64dp"
+            android:layout_marginTop="18dp"
+            android:numColumns="2"
+            android:verticalSpacing="16dp"
+            android:horizontalSpacing="16dp"
+            android:stretchMode="columnWidth"
             android:gravity="center"
-            android:numColumns="3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview_second" />
+            android:paddingBottom="50dp"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@+id/textview_second"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>
