@@ -6,30 +6,23 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:overScrollMode="ifContentScrolls"
         android:padding="30dp"
         android:textAlignment="center"
         android:visibility="visible">
 
-        <!-- Spinner de Biomas -->
         <Spinner
             android:id="@+id/spinnerBiomas"
-            android:layout_width="324dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbarSize="8dp"
-            android:textSize="40dp"/>
-
-        <!-- Imagem do Bioma -->
-
-        <!-- Descrição do Bioma -->
-
-        <!-- Botão para navegar a tela de aves -->
+            android:textSize="40dp" />
 
         <ImageView
             android:id="@+id/imageBioma"
-            android:layout_width="325dp"
+            android:layout_width="match_parent"
             android:layout_height="182dp"
             android:layout_marginTop="16dp"
             android:scaleType="centerCrop"
@@ -37,7 +30,7 @@
 
         <TextView
             android:id="@+id/textDescricao"
-            android:layout_width="329dp"
+            android:layout_width="match_parent"
             android:layout_height="273dp"
             android:layout_marginTop="16dp"
             android:autoText="true"
