@@ -1,2 +1,2 @@
 # Guia do Ornitólogo 🐦️🦜
-App para avaliação na disciplina de Programação para Dispositivos Móveis, utilizando Java. 
+Este app é uma mini enciclopédia para conhecer mais sobre as aves de cada bioma do Brasil.
